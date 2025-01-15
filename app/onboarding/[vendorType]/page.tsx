@@ -1,6 +1,12 @@
 import { VendorOnboardingForm } from '@/components/onboarding/vendor-onboarding-form'
 
-export default function VendorOnboardingPage({ params }: { params: { vendorType: string } }) {
+interface VendorOnboardingPageProps {
+  params: {
+    vendorType: string
+  }
+}
+
+export default function VendorOnboardingPage({ params }: VendorOnboardingPageProps) {
   const vendorTypeMap: { [key: string]: string } = {
     'food-vendor': 'Food Vendor',
     'venue-provider': 'Venue Provider',
