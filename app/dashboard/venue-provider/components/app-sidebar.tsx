@@ -11,7 +11,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { IconType } from "lucide-react"
+
 
 // interface NavItemType {
 //   title: string
@@ -25,13 +25,14 @@ import { IconType } from "lucide-react"
 interface NavItemType {
   title: string
   url: string
-  icon: IconType  // Change this line
-  isActive?: boolean  // Add this if it's used in NavItem type
+  icon: LucideIcon
+  isActive?: boolean
   items?: {
     title: string
     url: string
   }[]
 }
+
 const venueProviderData = {
   user: {
     name: "Venue Manager",
