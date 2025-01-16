@@ -1,7 +1,7 @@
-"use client"
 
+'use client '
 import * as React from "react"
-import { LayoutDashboard, Package, Calendar, PenToolIcon as Tool, Truck, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle } from 'lucide-react'
+import { LayoutDashboard, Package, Calendar, PenToolIcon as Tool, Truck, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle, LucideIcon } from 'lucide-react'
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import {
@@ -11,6 +11,17 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+
+interface NavItemType {
+  title: string
+  url: string
+  icon: LucideIcon
+  isActive?: boolean
+  items?: {
+    title: string
+    url: string
+  }[]
+}
 
 
 // interface NavItemType {
@@ -22,16 +33,6 @@ import {
 //     url: string
 //   }[]
 // }
-interface NavItemType {
-  title: string
-  url: string
-  icon: LucideIcon
-  isActive?: boolean
-  items?: {
-    title: string
-    url: string
-  }[]
-}
 
 const equipmentVendorData = {
   user: {

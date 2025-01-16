@@ -1,7 +1,6 @@
 "use client"
-
 import * as React from "react"
-import { LayoutDashboard, Calendar, MapPin, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle, Star, Utensils } from 'lucide-react'
+import { LayoutDashboard, Calendar, MapPin, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle, Star, Utensils, LucideIcon } from 'lucide-react'
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import {
@@ -11,6 +10,17 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+
+interface NavItemType {
+  title: string
+  url: string
+  icon: LucideIcon
+  isActive?: boolean
+  items?: {
+    title: string
+    url: string
+  }[]
+}
 
 
 // interface NavItemType {
@@ -22,16 +32,6 @@ import {
 //     url: string
 //   }[]
 // }
-interface NavItemType {
-  title: string
-  url: string
-  icon: LucideIcon
-  isActive?: boolean
-  items?: {
-    title: string
-    url: string
-  }[]
-}
 
 const venueProviderData = {
   user: {
