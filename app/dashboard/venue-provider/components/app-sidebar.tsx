@@ -1,7 +1,6 @@
 "use client"
-
 import * as React from "react"
-import { LayoutDashboard, Calendar, MapPin, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle, Star, Utensils } from 'lucide-react'
+import { LayoutDashboard, Calendar, MapPin, Users, BarChart2, Banknote, ClipboardList, Cog, HelpCircle, Star, Utensils, LucideIcon } from 'lucide-react'
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
 import {
@@ -15,12 +14,24 @@ import {
 interface NavItemType {
   title: string
   url: string
-  icon: React.ElementType
+  icon: LucideIcon
+  isActive?: boolean
   items?: {
     title: string
     url: string
   }[]
 }
+
+
+// interface NavItemType {
+//   title: string
+//   url: string
+//   icon: React.ElementType
+//   items?: {
+//     title: string
+//     url: string
+//   }[]
+// }
 
 const venueProviderData = {
   user: {
