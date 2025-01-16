@@ -1,20 +1,22 @@
 import { VendorOnboardingForm } from '@/components/onboarding/vendor-onboarding-form'
 
 type PageProps = {
-  params: {
+  params: Promise<{
     vendorType: string
-  }
-  searchParams: { [key: string]: string | string[] | undefined }
+  }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
 export default async function VendorOnboardingPage({ params }: PageProps) {
+  const { vendorType } = await params
+
   const vendorTypeMap: { [key: string]: string } = {
     'food-vendor': 'Food Vendor',
     'venue-provider': 'Venue Provider',
     'equipment-vendor': 'Equipment & Stage Vendor'
   }
 
-  const vendorType = vendorTypeMap[params.vendorType] || 'Vendor'
+  const vendorType = vendorTypeMap[vendorType] || 'Vendor'
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -25,4 +27,3 @@ export default async function VendorOnboardingPage({ params }: PageProps) {
     </div>
   )
 }
-
