@@ -2,16 +2,14 @@
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { DayPicker, DayPickerDefaultProps, DayPickerSingleProps, DayPickerMultipleProps, DayPickerRangeProps } from "react-day-picker"
+import { DayPicker, type DayPickerProps } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-export type CalendarProps = Omit<
-  DayPickerDefaultProps | DayPickerSingleProps | DayPickerMultipleProps | DayPickerRangeProps,
-  "components"
-> & {
-  components?: Partial<DayPickerDefaultProps["components"]>
+type CalendarProps = Omit<DayPickerProps, "mode"> & {
+  mode?: "default" | "single" | "multiple" | "range"
+  className?: string
 }
 
 function Calendar({
@@ -72,7 +70,7 @@ function Calendar({
           <ChevronRight className={cn("h-4 w-4")} {...props} />
         ),
       }}
-      {...props}
+      {...(props as DayPickerProps)}
     />
   )
 }
