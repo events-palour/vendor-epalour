@@ -1,6 +1,7 @@
 "use client"
 
 import { EquipmentVendorSidebar } from "./components/app-sidebar"
+import { useGreeting } from "../../../hooks/use-greetings"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -19,6 +20,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BarChart, Calendar, DollarSign, Package } from 'lucide-react'
 
 export default function EquipmentVendorDashboard() {
+   const vendorData = { user: { name: "olive doe" } }; // Replace with actual data fetching
+    const { greeting, timestamp } = useGreeting(vendorData.user.name)
   return (
     <SidebarProvider>
       <EquipmentVendorSidebar />
@@ -41,7 +44,14 @@ export default function EquipmentVendorDashboard() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <h1 className="text-2xl font-bold">Equipment Vendor Dashboard</h1>
+          <div className="space-y-1">
+            <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+              {greeting}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              {timestamp}
+            </p>
+          </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <DashboardCard title="Total Inventory" value="1,234" icon={Package} />
             <DashboardCard title="Active Rentals" value="42" icon={Calendar} />

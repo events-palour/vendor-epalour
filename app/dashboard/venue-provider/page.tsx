@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
+import { useGreeting } from "../../../hooks/use-greetings"
 import {
   SidebarInset,
   SidebarProvider,
@@ -19,6 +20,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, DollarSign, Users } from 'lucide-react'
 
 export default function VenueProviderDashboard() {
+   const vendorData = { user: { name: "olive doe" } }; // Replace with actual data fetching
+    const { greeting, timestamp } = useGreeting(vendorData.user.name)
   return (
     <SidebarProvider>
       <VenueProviderSidebar />
@@ -41,7 +44,14 @@ export default function VenueProviderDashboard() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <h1 className="text-2xl font-bold">Venue Provider Dashboard</h1>
+          <div className="space-y-1">
+            <h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+              {greeting}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              {timestamp}
+            </p>
+          </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <DashboardCard title="Total Bookings" value="87" icon={Calendar} />
             <DashboardCard title="Upcoming Events" value="12" icon={Calendar} />
