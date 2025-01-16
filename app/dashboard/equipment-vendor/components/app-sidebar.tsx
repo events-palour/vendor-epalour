@@ -135,7 +135,7 @@ export function EquipmentVendorSidebar({ ...props }: React.ComponentProps<typeof
   return (
     <Sidebar collapsible="icon" className="bg-white text-black" {...props}>
       <SidebarHeader>
-        <div className="p-4">
+        <div className="p-4 group-data-[collapsible=icon]:hidden">
           <h2 className="text-lg font-semibold">Equipment Vendor</h2>
         </div>
       </SidebarHeader>

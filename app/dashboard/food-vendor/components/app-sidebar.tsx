@@ -4,7 +4,6 @@ import * as React from "react"
 import { LucideIcon } from "lucide-react"
 import { NavMain } from "./nav-main"
 import { NavUser } from "./nav-user"
-import { TeamSwitcher } from "./team-switcher"
 import {
   Sidebar,
   SidebarContent,
@@ -34,26 +33,12 @@ interface NavItemType {
   }[]
 }
 
-interface Team {
-  name: string
-  logo: React.ElementType
-  plan: string
-}
-
 const vendorData = {
   user: {
     name: "Food Vendor",
     email: "vendor@example.com",
     avatar: "/avatars/vendor.svg",
   },
-  teams: [
-    {
-      name: "Food Truck Co",
-      logo: StoreIcon,
-      plan: "Business",
-    },
-   
-  ] as Team[],
   navMain: [
     {
       title: "Dashboard",
@@ -187,7 +172,9 @@ export function VendorSidebar({ ...props }: React.ComponentProps<typeof Sidebar>
   return (
     <Sidebar collapsible="icon" className="bg-white text-black" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={vendorData.teams} />
+      <div className="p-4 group-data-[collapsible=icon]:hidden">
+          <h2 className="text-lg font-semibold">Food Vendor</h2>
+        </div>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={vendorData.navMain} />

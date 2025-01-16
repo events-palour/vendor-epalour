@@ -133,7 +133,7 @@ export function VenueProviderSidebar({ ...props }: React.ComponentProps<typeof S
   return (
     <Sidebar collapsible="icon" className="bg-white text-black" {...props}>
       <SidebarHeader>
-        <div className="p-4">
+        <div className="p-4 group-data-[collapsible=icon]:hidden">
           <h2 className="text-lg font-semibold">Venue Provider</h2>
         </div>
       </SidebarHeader>
@@ -147,3 +147,4 @@ export function VenueProviderSidebar({ ...props }: React.ComponentProps<typeof S
     </Sidebar>
   )
 }
+
