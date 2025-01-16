@@ -2,14 +2,15 @@
 
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { DayPicker, type DayPickerProps } from "react-day-picker"
+import { DayPicker } from "react-day-picker"
+import type { DateRange } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-type CalendarProps = Omit<DayPickerProps, "mode"> & {
+type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   mode?: "default" | "single" | "multiple" | "range"
-  className?: string
+  selected?: Date | DateRange | Date[] | undefined
 }
 
 function Calendar({
@@ -70,7 +71,7 @@ function Calendar({
           <ChevronRight className={cn("h-4 w-4")} {...props} />
         ),
       }}
-      {...(props as DayPickerProps)}
+      {...props}
     />
   )
 }
