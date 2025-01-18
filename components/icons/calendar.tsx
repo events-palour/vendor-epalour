@@ -10,7 +10,7 @@ const defaultTransition: Transition = {
   mass: 0.4,
 };
 
-const CircleHelpIcon = () => {
+const CalendarIcon = () => {
   const controls = useAnimation();
 
   return (
@@ -21,19 +21,18 @@ const CircleHelpIcon = () => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-         width="18"
+        width="18"
         height="18"
-        x="0px"
-        y="0px"
-        viewBox="12.249774932861328 11.960000038146973 39.50045394897461 40.08000183105469"
+        viewBox="11.773000717163086 11.194999694824219 40.454002380371094 40.11000061035156"
         fill="none"
         stroke="black"
-        strokeWidth="2"
+        strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-       <motion.path
-          d="M42.5,30.296v-4.661c0-3.896-3.159-7.055-7.055-7.055h-6.89c-3.896,0-7.055,3.159-7.055,7.055v4.661"
+        <motion.path
+          d="M39.537,50.805H22.391c-5.588,0-10.118-4.53-10.118-10.118V26.935c0-5.588,4.53-10.118,10.118-10.118h19.218c5.588,0,10.118,4.53,10.118,10.118v12.052c0,1.086-0.444,2.125-1.23,2.875l-8.215,7.844C41.542,50.411,40.559,50.805,39.537,50.805z"
+          fill="#FFFFFF"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -43,7 +42,8 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.path
-          d="M39,50.08L39,50.08c1.933,0,3.5-1.567,3.5-3.5v-2.477"
+          d="M49.963,39.756h-5.76c-2.182,0-3.951,1.769-3.951,3.951v5.371c0,0.963,1.154,1.457,1.851,0.792l8.616-8.226C51.433,40.961,50.95,39.756,49.963,39.756z"
+          fill="#FFFFFF"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -53,7 +53,8 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.path
-          d="M19.653,44.103c-3.883,0-7.018-3.206-6.9-7.116c0.113-3.778,3.41-6.691,7.19-6.691l1.279,0c1.12,0,2.028,0.908,2.028,2.028v9.75c0,1.12-0.908,2.028-2.028,2.028H19.653z"
+          d="M25.169,11.695c-0.827,0-1.5,0.673-1.5,1.5v7.731c0,0.827,0.673,1.5,1.5,1.5s1.5-0.673,1.5-1.5v-7.731C26.669,12.368,25.997,11.695,25.169,11.695z"
+          fill="#FFFFFF"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -63,27 +64,8 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.path
-          d="M44.347,44.103c3.883,0,7.018-3.206,6.9-7.116c-0.113-3.778-3.41-6.691-7.19-6.691l-1.279,0c-1.12,0-2.028,0.908-2.028,2.028v9.75c0,1.12,0.908,2.028,2.028,2.028H44.347z"
-          initial={false}
-          variants={{
-            normal: { pathLength: 1 },
-            animate: { pathLength: 0.8 },
-          }}
-          animate={controls}
-          transition={defaultTransition}
-        />
-        <motion.path
-          d="M30.838,12.46h8.427c2.753,0,4.985,2.232,4.985,4.985v2.16c0,2.753-2.232,4.985-4.985,4.985h-8.627c-0.243,0-0.44,0.197-0.44,0.44v0.033c0,1.135-0.829,2.148-1.959,2.255c-1.296,0.124-2.386-0.892-2.386-2.162v-5.552v-1.088v-1.072C25.853,14.692,28.085,12.46,30.838,12.46z"
-          initial={false}
-          variants={{
-            normal: { pathLength: 1 },
-            animate: { pathLength: 0.8 },
-          }}
-          animate={controls}
-          transition={defaultTransition}
-        />
-        <motion.path
-          d="M38.031,51.54H36.38c-0.535,0-0.969-0.434-0.969-0.969v-1.272c0-0.535,0.434-0.969,0.969-0.969h1.652c0.535,0,0.969,0.434,0.969,0.969v1.272C39,51.106,38.566,51.54,38.031,51.54z"
+          d="M37.556,11.695c-0.827,0-1.5,0.673-1.5,1.5v7.731c0,0.827,0.673,1.5,1.5,1.5s1.5-0.673,1.5-1.5v-7.731C39.056,12.368,38.383,11.695,37.556,11.695z"
+          fill="#FFFFFF"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -93,10 +75,10 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.line
-          x1="39.54"
-          y1="18.58"
-          x2="39.54"
-          y2="18.58"
+          x1="22.614"
+          y1="34.182"
+          x2="28.049"
+          y2="34.182"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -106,10 +88,10 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.line
-          x1="35.082"
-          y1="18.58"
-          x2="35.082"
-          y2="18.58"
+          x1="36.302"
+          y1="34.182"
+          x2="41.737"
+          y2="34.182"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -119,10 +101,46 @@ const CircleHelpIcon = () => {
           transition={defaultTransition}
         />
         <motion.line
-          x1="30.625"
-          y1="18.58"
-          x2="30.625"
-          y2="18.58"
+          x1="22.614"
+          y1="41.345"
+          x2="28.049"
+          y2="41.345"
+          initial={false}
+          variants={{
+            normal: { pathLength: 1 },
+            animate: { pathLength: 0.8 },
+          }}
+          animate={controls}
+          transition={defaultTransition}
+        />
+        <motion.line
+          x1="13.257"
+          y1="26.875"
+          x2="50.728"
+          y2="26.875"
+          initial={false}
+          variants={{
+            normal: { pathLength: 1 },
+            animate: { pathLength: 0.8 },
+          }}
+          animate={controls}
+          transition={defaultTransition}
+        />
+        <motion.path
+          d="M25.169,13.195v7.731"
+          initial={false}
+          variants={{
+            normal: { pathLength: 1 },
+            animate: { pathLength: 0.8 },
+          }}
+          animate={controls}
+          transition={defaultTransition}
+        />
+        <motion.line
+          x1="37.556"
+          y1="20.889"
+          x2="37.556"
+          y2="13.195"
           initial={false}
           variants={{
             normal: { pathLength: 1 },
@@ -136,4 +154,5 @@ const CircleHelpIcon = () => {
   );
 };
 
-export { CircleHelpIcon };
+export { CalendarIcon };
+
